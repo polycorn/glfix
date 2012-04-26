@@ -1,4 +1,4 @@
-#-------------------------------------------------
+#--------------------------------------------------
 #
 # Project created by QtCreator 2012-04-23T00:00:04
 #
@@ -10,9 +10,16 @@ TARGET = glfix
 TEMPLATE = lib
 CONFIG += staticlib
 
-SOURCES += glfix.cpp
+SOURCES += \
+    glfix/glfix.cpp \
+    glfix/glfixcamera.cpp
 
-HEADERS += glfix.h
+HEADERS += \
+    glfix/glfix.h \
+	glfix/glm/*.* \
+    glfix/glfixcamera.h
+
+
 unix:!symbian {
     maemo5 {
         target.path = /opt/usr/lib
@@ -21,3 +28,5 @@ unix:!symbian {
     }
     INSTALLS += target
 }
+
+
